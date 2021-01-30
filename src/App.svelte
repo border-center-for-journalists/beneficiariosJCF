@@ -20,48 +20,53 @@
 	const makeMessage = ben => 'Hola, aparezco en el padron de beneficiarios de Jovenes construyendo futuro pero quiero reportar una anomalía. Mi nombre es '+ben.nombreCompleto+'.';
 
 </script>
-
+<!-- <nav>
+	<a href=''><img src='img/el-norte.png' alt='' /></a>
+	<a href=''><img src='img/border-hub.jpg' alt='' style='width:200px'/></a>
+</nav> -->
 <main>
-	<section>
-		<h1>¿Soy Beneficiario?</h1>
-		<p>El programa Jovenes construyendo un futuro a otorgado <strong> $ 40,529,994,316 pesos </strong> a <strong>2.1 millones</strong> de jovenes entre los años 2019 y 2020. Queremos transparentar el padron de beneficiarios para prevenir fraude y corrupcion en el programa.</p>
+	<h1>¿Soy Beneficiario?</h1>
+	<section class='container'>
+		<p>El programa Jovenes construyendo un futuro a otorgado <strong> $40,529,994,316 pesos </strong> a <strong>2.1 millones</strong> de jovenes entre los años 2019 y 2020. Queremos transparentar el padron de beneficiarios para prevenir fraude y corrupcion en el programa.</p>
 
 		<p>Busca tu nombre y si detectas alguna anomalia denuncia a la STPS o tambien a <a target='_blank' href='https://wa.me/528119990007?text={message}'>El Norte</a> con el fin de documentar posibles casos de operacion fraudulenta en el programa</p>
 	</section>
-	<form>
+	<form class='container'>
 		<input type='text' placeholder="Busca tu nombre" on:keyup={({ target: { value } }) => debounce(value)} />
 	</form>
-	{#await beneficiarioPromise}
-		<p>buscando...</p>
-	{:then beneficiarios}
-	<ul>
-		{#if beneficiarios.length}
-			{#each beneficiarios as beneficiario}
-				<li>
-					<span>{beneficiario.nombreCompleto}</span>
-					<span>{beneficiario.municipio.nombreMunicipio}, {beneficiario.municipio.nombreEntidad}</span>
-					<span>{formatCurrency(beneficiario.importe)}</span>
-					<span class='cta whatsapp'><a target='_blank' href='https://wa.me/528119990007?text={makeMessage(beneficiario)}'> Soy yo, quiero denunciar (whatsapp)</a></span>
-				</li>
-			{/each}
-		{:else}
-			<p>Sin resultados</p>
-		{/if}
-	</ul>
-	{/await}
+	<section class='container'>
+		{#await beneficiarioPromise}
+			<p>buscando...</p>
+		{:then beneficiarios}
+		<ul>
+			{#if beneficiarios.length}
+				{#each beneficiarios as beneficiario}
+					<li>
+						<span>{beneficiario.nombreCompleto}</span>
+						<span>{beneficiario.municipio.nombreMunicipio}, {beneficiario.municipio.nombreEntidad}</span>
+						<span>{formatCurrency(beneficiario.importe)}</span>
+						<span class='cta whatsapp'><a target='_blank' href='https://wa.me/528119990007?text={makeMessage(beneficiario)}'> Soy yo, quiero denunciar (whatsapp)</a></span>
+					</li>
+				{/each}
+			{:else}
+				<p>Sin resultados</p>
+			{/if}
+		</ul>
+		{/await}
+	</section>
 </main>
 
 <style>
-	main{
-		display: flex;
-		flex-direction: column;
+	
+	.container{
 		max-width:840px;
 		margin:0 auto;
 		padding:0 20px;
 	}
-	section h1{
+	h1{
 		text-align: center;
 		font-size:3em;
+		margin:20px auto 0;
 	}
 	ul{
 		list-style-type:none;
