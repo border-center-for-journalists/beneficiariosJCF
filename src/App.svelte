@@ -27,9 +27,13 @@
 <main>
 	<h1>¿Soy Beneficiario?</h1>
 	<section class='container'>
-		<p>El programa Jovenes construyendo un futuro a otorgado <strong> $40,529,994,316 pesos </strong> a <strong>2.1 millones</strong> de jovenes entre los años 2019 y 2020. Queremos transparentar el padron de beneficiarios para prevenir fraude y corrupcion en el programa.</p>
+		<p>¿Soy beneficiario? Jóvenes Construyendo el Futuro es uno de los programas emblemáticos del Presiente Andrés Manuel López Obrador, sin embargo, ha sido utilizado para desviar recurso públicos engañando a beneficiarios para obtener sus datos  personales, inscribirlos al programa y robar su beca económica.</p>
+ 		<p>¿Quieres comprobar si fuiste parte de este engaño?</p>
+		<p>Usa nuestra herramienta de búsqueda, ingresa tu nombre completo sin acentos para revisar si tus datos fueron utilizados.</p>
+		<p>Si encuentras tu nombre da un click en la leyenda  <a target='_blank' href='https://wa.me/528119990007?text={message}'>“Soy yo, quiero denunciar”</a> y EL NORTE documentará el mal uso de tu información para evidenciar las anomalías del programa.</p>
+		<!-- <p>El programa Jovenes construyendo un futuro a otorgado <strong> $40,529,994,316 pesos </strong> a <strong>2.1 millones</strong> de jovenes entre los años 2019 y 2020. Queremos transparentar el padron de beneficiarios para prevenir fraude y corrupcion en el programa.</p>
 
-		<p>Busca tu nombre y si detectas alguna anomalia denuncia a la STPS o tambien a <a target='_blank' href='https://wa.me/528119990007?text={message}'>El Norte</a> con el fin de documentar posibles casos de operacion fraudulenta en el programa</p>
+		<p>Busca tu nombre y si detectas alguna anomalia denuncia a la STPS o tambien a <a target='_blank' href='https://wa.me/528119990007?text={message}'>El Norte</a> con el fin de documentar posibles casos de operacion fraudulenta en el programa</p> -->
 	</section>
 	<form class='container'>
 		<input type='text' placeholder="Busca tu nombre" on:keyup={({ target: { value } }) => debounce(value)} />
