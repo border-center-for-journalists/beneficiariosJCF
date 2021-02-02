@@ -27,7 +27,7 @@
 <main>
 	<h1>¿Soy Beneficiario?</h1>
 	<section class='container'>
-		<p>¿Soy beneficiario? Jóvenes Construyendo el Futuro es uno de los programas emblemáticos del Presiente Andrés Manuel López Obrador, sin embargo, ha sido utilizado para desviar recurso públicos engañando a beneficiarios para obtener sus datos  personales, inscribirlos al programa y robar su beca económica.</p>
+		<p>Jóvenes Construyendo el Futuro es uno de los programas emblemáticos del Presiente Andrés Manuel López Obrador, sin embargo, ha sido utilizado para desviar recurso públicos engañando a beneficiarios para obtener sus datos  personales, inscribirlos al programa y robar su beca económica.</p>
  		<p>¿Quieres comprobar si fuiste parte de este engaño?</p>
 		<p>Usa nuestra herramienta de búsqueda, ingresa tu nombre completo sin acentos para revisar si tus datos fueron utilizados.</p>
 		<p>Si encuentras tu nombre da un click en la leyenda  <a target='_blank' href='https://wa.me/528119990007?text={message}'>“Soy yo, quiero denunciar”</a> y EL NORTE documentará el mal uso de tu información para evidenciar las anomalías del programa.</p>
