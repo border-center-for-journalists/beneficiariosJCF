@@ -25,7 +25,7 @@
 	<a href=''><img src='img/border-hub.jpg' alt='' style='width:200px'/></a>
 </nav> -->
 <main>
-	<h1>¿Soy Beneficiario?</h1>
+	<h1><a target='_blank' href='https://soybeneficiario.borderhub.org'>¿Soy Beneficiario?</a></h1>
 	<section class='container'>
 		<p>Jóvenes Construyendo el Futuro es uno de los programas emblemáticos del Presiente Andrés Manuel López Obrador, sin embargo, ha sido utilizado para desviar recurso públicos engañando a beneficiarios para obtener sus datos  personales, inscribirlos al programa y robar su beca económica.</p>
  		<p>¿Quieres comprobar si fuiste parte de este engaño?</p>
@@ -71,6 +71,10 @@
 		text-align: center;
 		font-size:3em;
 		margin:20px auto 0;
+		border-bottom:1px solid #FFF200;
+	}
+	h1 a{
+		color:black;
 	}
 	ul{
 		list-style-type:none;
