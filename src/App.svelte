@@ -69,12 +69,18 @@
 	}
 	h1{
 		text-align: center;
-		font-size:3em;
+		font-size:2.7em;
 		margin:20px auto 0;
 		border-bottom:1px solid #FFF200;
+		width: 480px;
+		margin-bottom:30px;
+		padding-bottom:20px;
 	}
 	h1 a{
 		color:black;
+	}
+	h1 a:hover{
+		text-decoration: none;
 	}
 	ul{
 		list-style-type:none;
@@ -84,7 +90,7 @@
 		display: flex;
 		flex-direction: column;
 		margin-bottom:8px;
-		border-bottom:1px solid pink;
+		border-bottom:1px solid #FFF200;
 		padding:10px 0;
 	}
 	li span:first-child{
