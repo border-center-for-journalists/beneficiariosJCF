@@ -36,7 +36,9 @@
 		<p>Busca tu nombre y si detectas alguna anomalia denuncia a la STPS o tambien a <a target='_blank' href='https://wa.me/528119990007?text={message}'>El Norte</a> con el fin de documentar posibles casos de operacion fraudulenta en el programa</p> -->
 	</section>
 	<form class='container'>
+		<img src="..\img\search-solid.svg" alt="Búsqueda" width = "30px">
 		<input type='text' placeholder="Busca tu nombre" on:keyup={({ target: { value } }) => debounce(value)} />
+		<img src="..\img\times-solid.svg" alt="Cerrar" width = "15px">
 	</form>
 	<section class='container'>
 		{#await beneficiarioPromise}
@@ -49,7 +51,7 @@
 						<span>{beneficiario.nombreCompleto}</span>
 						<span>{beneficiario.municipio.nombreMunicipio}, {beneficiario.municipio.nombreEntidad}</span>
 						<span>{formatCurrency(beneficiario.importe)}</span>
-						<span class='cta whatsapp'><a target='_blank' href='https://wa.me/528119990007?text={makeMessage(beneficiario)}'> Soy yo, quiero denunciar (whatsapp)</a></span>
+						<span class='cta whatsapp'><a target='_blank' href='https://wa.me/528119990007?text={makeMessage(beneficiario)}'> Soy yo, quiero denunciar (whatsapp)</a><img src="..\img\whatsapp-brands.svg" alt="Whatsapp" width="30px"/></span>
 					</li>
 				{/each}
 			{:else}
@@ -62,7 +64,7 @@
 
 <style>
 	
-	.container{
+	section.container{
 		max-width:840px;
 		margin:0 auto;
 		padding:0 20px;
@@ -71,7 +73,7 @@
 		text-align: center;
 		font-size:2.7em;
 		margin:20px auto 0;
-		border-bottom:1px solid #FFF200;
+		border-bottom:1px solid #E7E7E7;
 		max-width: 480px;
 		margin-bottom:30px;
 		padding-bottom:20px;
@@ -87,14 +89,75 @@
 		padding:0;
 	}
 	li{
+		background-color: black;
+		color: white;
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		letter-spacing: 1px;
+		font-weight: lighter;
+		
+
 		display: flex;
 		flex-direction: column;
-		margin-bottom:8px;
-		border-bottom:1px solid #FFF200;
-		padding:10px 0;
+		margin-bottom:10px;
+		border-bottom:1px solid #F3E44B;
+		padding:2em;
 	}
 	li span:first-child{
-		font-size:16px;
-		font-weight: bold;
+		font-size:25px;
 	}
+	li span:nth-child(2){
+		margin-top: 10px;
+		margin-bottom: 10px;
+		padding-bottom: 10px;
+		font-size: 15px;
+		border-bottom: 2px solid #F3E44B;
+	}
+	li span:nth-child(3){
+		font-size: 25px;
+		margin-bottom: 20px;
+	}
+	li span:nth-child(4){
+		font-size: 18px;
+		color: #F3E44B;
+	}
+	a{
+		color: #F3E44B;
+	}
+	p {
+		font-weight: bold;
+		text-align: center;
+	}
+	img{
+		vertical-align: middle;
+		margin-left: 10px;
+	}
+
+
+	/*Form*/
+	input{
+        border: none;
+        border-bottom: 1px solid black;
+        background-color: #F3E44B;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        font-weight: bold;
+        color: black;
+        width: 500px;
+    }
+    form.container{
+        background-color: #F3E44B;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+
+		max-width:none !important;
+		margin:0;
+		padding:0;
+    }
+    img {
+        margin-right: 20px;
+        margin-left: 10px;
+        vertical-align: middle;
+    }
 </style>
