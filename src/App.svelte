@@ -51,7 +51,7 @@
 						<span>{beneficiario.nombreCompleto}</span>
 						<span>{beneficiario.municipio.nombreMunicipio}, {beneficiario.municipio.nombreEntidad}</span>
 						<span>{formatCurrency(beneficiario.importe)}</span>
-						<span class='cta whatsapp'><a target='_blank' href='https://wa.me/528119990007?text={makeMessage(beneficiario)}'> Soy yo, quiero denunciar (whatsapp)</a><img src="..\img\whatsapp-brands.svg" alt="Whatsapp" width="30px"/></span>
+						<span class='cta whatsapp'>Soy yo <a target='_blank' class="button" href='https://wa.me/528119990007?text={makeMessage(beneficiario)}'> Quiero denunciar<img src="..\img\whatsapp-brands.svg" alt="Whatsapp" width="30px"/></a></span>
 					</li>
 				{/each}
 			{:else}
@@ -119,6 +119,7 @@
 	li span:nth-child(4){
 		font-size: 18px;
 		color: #F3E44B;
+		font-weight: bold;
 	}
 	a{
 		color: #F3E44B;
@@ -130,6 +131,9 @@
 	img{
 		vertical-align: middle;
 		margin-left: 10px;
+		margin-right: 20px;
+        margin-left: 10px;
+        vertical-align: middle;
 	}
 
 
@@ -155,9 +159,18 @@
 		margin:0;
 		padding:0;
     }
-    img {
-        margin-right: 20px;
-        margin-left: 10px;
-        vertical-align: middle;
-    }
+	a.button{
+		appearance: button;
+		background-color: #F3E44B;
+		color: #000000;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-right: 18x;
+		padding-left: 20px;
+		text-decoration: none;
+		margin-left: 20px;
+	}
+	a.button:hover{
+		background-color: #ffea00;
+	}
 </style>
