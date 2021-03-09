@@ -51,7 +51,7 @@
 						<span>{beneficiario.nombreCompleto}</span>
 						<span>{beneficiario.municipio.nombreMunicipio}, {beneficiario.municipio.nombreEntidad}</span>
 						<span>{formatCurrency(beneficiario.importe)}</span>
-						<span class='cta whatsapp'>Soy yo <a target='_blank' class="button" href='https://wa.me/528119990007?text={makeMessage(beneficiario)}'> Quiero denunciar<img src="..\img\whatsapp-brands.svg" alt="Whatsapp" width="30px"/></a></span>
+						<span class='cta whatsapp'>¡Soy yo! <a target='_blank' class="button" href='https://wa.me/528119990007?text={makeMessage(beneficiario)}'> Denunciar<img src="..\img\whatsapp-brands.svg" alt="Whatsapp" width="30px"/></a></span>
 					</li>
 				{/each}
 			{:else}
@@ -91,7 +91,6 @@
 	li{
 		background-color: black;
 		color: white;
-		font-family: Verdana, Geneva, Tahoma, sans-serif;
 		letter-spacing: 1px;
 		font-weight: lighter;
 		
